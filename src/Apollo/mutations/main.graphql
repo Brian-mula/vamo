@@ -1,0 +1,9 @@
+mutation FillBracket(
+  $token: String!
+  $bracket: JSON!
+) {
+  fillBracketChallenge(
+    token: $token
+    bracket: $bracket
+  )
+}

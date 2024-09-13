@@ -1,0 +1,13 @@
+overwrite: true
+schema: "http://51.15.114.21:4000/graphql"
+documents: "src/Apollo/**/*.graphql"
+generates:
+  src/Apollo/graphql.ts:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+    config:
+      withComponent: false
+      withHOC: false
+      withHooks: true

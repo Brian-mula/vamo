@@ -1,0 +1,21 @@
+query Configuration {
+  configuration: getConfiguration {
+    isChallengeOver
+    bracket
+    mainBanner
+    mainBannerUrl
+    mainBannerButtonText
+    bonusBanner
+    bonusBannerUrl
+    bonusBannerButtonText
+  }
+}
+
+
+query Bracket($token: String!) {
+  getBracket(token: $token)
+  configuration: getConfiguration {
+    isChallengeOver
+    bracket
+  }
+}
